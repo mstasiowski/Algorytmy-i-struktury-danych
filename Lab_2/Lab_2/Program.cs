@@ -12,6 +12,7 @@
             int[] arr = { 3, 4, 1, 2, 7, 8, 9 };
             BubleSort(arr);
             Console.WriteLine(String.Join(",",arr));
+            Console.WriteLine(sum(arr, 2, 0));
         }
 
 
@@ -41,7 +42,12 @@
         //Napisz wersje rekursyjną funkcji sumującej elementy tablicy od start do end
         public static int sum(int[] arr, int start, int left)
         {
-            throw new NotImplementedException();
+            left += arr[start];
+            if(start == arr.Length-1)
+            {
+                return left;
+            }
+            return sum(arr, start + 1, left);
         }
 
 
