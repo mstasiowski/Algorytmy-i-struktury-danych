@@ -5,6 +5,7 @@ namespace task_1
     {
         static void Main(string[] args)
         {
+            //cw1
             int[] arr = { 1, 2, 6, 9, 4, 3 };
             Console.WriteLine(IsInArrayRecursive(arr, 0, arr.Length - 1, 0));
             Console.WriteLine(IsInArrayRecursive(arr, 0, arr.Length - 1, 6));
@@ -53,13 +54,19 @@ namespace task_1
             //Nie można używać instrukcji iteracyjnych!!! Wartość funkcja dla pustej tablicy wynosi 0.
             //Można założyć, że tablica nie będzie równa null. Zdefiniuj funkcję pomocniczą która będzie wywoływana
             //rekurencyjnie wewnątrz SumMod3.
-            public static long SumMod3(int[] arr)
+            public static long SumMod3(int[] arr, int begin, int value)
             {
-                throw new NotImplementedException();
-            }
+            int arrsum = 0;
 
-            //Zdefiniuj funkcję rekurencyjną, która oblicza silnię liczby.
-            public static long Factorial(int n)
+            if (arr[begin]% 3 == 0)
+            {
+                arrsum =  arr[begin];
+            }
+            throw new NotImplementedException();
+        }
+
+        //Zdefiniuj funkcję rekurencyjną, która oblicza silnię liczby.
+        public static long Factorial(int n)
             {
                 throw new NotImplementedException();
             }
