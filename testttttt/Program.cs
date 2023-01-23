@@ -20,10 +20,11 @@ namespace lab10
                 graph.AddUnDirectedEdge(4, 5, 0.5);
                 graph.AddDirectedEdge(5, 6, 2);
 
-                if(graph.IsPath(1, 5) && !graph.IsPath(3,1))
+                if (graph.IsPath(1, 5) && !graph.IsPath(3, 1))
                 {
                     Console.WriteLine("Test 1 passed");
-                }else
+                }
+                else
                 {
                     Console.WriteLine("Test 1 failed");
                 }
@@ -38,7 +39,7 @@ namespace lab10
                 }
 
                 List<int> list = graph.Neigbours(2);
-                if (list.Count ==2 && list.Contains(3) && list.Contains(4))
+                if (list.Count == 2 && list.Contains(3) && list.Contains(4))
                 {
                     Console.WriteLine("Test 3 passed");
                 }
@@ -48,7 +49,7 @@ namespace lab10
                 }
 
                 List<Edge<int, double>> path = graph.GetShortestPath(2, 5);
-                if (path.Count ==2 && path[0].Node ==4 &&path[1].Node ==5 && path[0].Weight ==3 && path[1].Weight == 0.5)
+                if (path.Count == 2 && path[0].Node == 4 && path[1].Node == 5 && path[0].Weight == 3 && path[1].Weight == 0.5)
                 {
                     Console.WriteLine("Test 4 passed");
                 }
@@ -65,18 +66,18 @@ namespace lab10
         }
     }
 
-    public class  Edge<T,W>:IComparable<Edge<T,W>> where W: IComparable<W>
+    public class Edge<T, W> : IComparable<Edge<T, W>> where W : IComparable<W>
     {
         public T Node { get; set; }
         public W Weight { get; set; }
 
         public int CompareTo(Edge<T, W>? other)
         {
-           return Weight.CompareTo(other.Weight);
+            return Weight.CompareTo(other.Weight);
         }
     }
 
-    public interface IGraph<T, W> where  W:IComparable<W>
+    public interface IGraph<T, W> where W : IComparable<W>
     {
         public void AddDirectedEdge(T source, T target, W weight);
         public void AddUnDirectedEdge(T node1, T node2, W weight);
@@ -126,7 +127,7 @@ namespace lab10
         public bool CanReturn(int start)
         {
 
-          /* sprawdza czy istnieje droga powrotna dla danego wierzchołka */
+            /* sprawdza czy istnieje droga powrotna dla danego wierzchołka */
 
 
             bool[] visitedPath = new bool[newlist.Count];

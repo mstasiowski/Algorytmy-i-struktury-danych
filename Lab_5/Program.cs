@@ -1,5 +1,6 @@
 ﻿
 using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.Intrinsics.Arm;
 
 namespace task_3
@@ -15,8 +16,17 @@ namespace task_3
 
             };
 
+            
+                foreach (Student i in students)
+                {
+                //Console.WriteLine(i);
+                }
+            Console.WriteLine();
+
+
         }
 
+        
 
 
         public class Student
@@ -74,7 +84,7 @@ namespace task_3
         public class Task3
         {
             /// <summary>
-            /// Zdefiniuj funkcję sortującą metodą bąbelkową wg pola SureName, dla identycznych nazwisk wg Name. Dla obu pól sorotwanie w porządku malejącym (od Z do A).
+            /// Zdefiniuj funkcję sortującą metodą bąbelkową wg pola SureName, dla identycznych nazwisk wg Name. Dla obu pól sortowanie w porządku malejącym (od Z do A).
             /// Wskazówka
             /// Wykorzystaj metodę CompareTo klasy string np. a.CompareTo(b);
             /// Zwraca ona wartości:
@@ -86,6 +96,12 @@ namespace task_3
             public static void BubbleSortByNameAndSureName(Student[] students)
             {
                 throw new NotImplementedException();
+
+
+             
+
+
+
             }
 
             /// <summary>
